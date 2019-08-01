@@ -113,7 +113,7 @@ function updateDB(id,q,total) {
             item_id = ${id}`, 
         function (err, res) {
             if (err) throw err.stack;
-            console.log("\nDatabase updated.\n")
+            console.log("\nInventory updated.\n")
             showAll()
         });
 }
