@@ -1,6 +1,6 @@
 # Amazon-Storefront
 
-This is a console-line application that emulates an online marketplace like Amazon. Utilizes ```inquirer``` and ```mysql``` modules in NodeJS.
+This is a console-line application that emulates an online marketplace like Amazon. Utilizes ```inquirer```, ```mysql```, and ```dotenv``` modules in NodeJS.
 
 ```
 WELCOME TO BAMAZON, CUSTOMER #232
