@@ -1,6 +1,6 @@
 # Amazon-Storefront
 
-This is a console-line application that emulates an online marketplace like Amazon. Utilizes the ```inquirer```, ```mysql```, and ```dotenv``` modules in NodeJS.
+This is a console-line application that emulates an online marketplace like Amazon. Contains 3 different js files for a **Customer**, **Manager**, and **Supervisor** with distinct access and tasks to perform. Utilizes the ```inquirer```, ```mysql```, and ```dotenv``` modules in NodeJS.
 
 ```
 WELCOME TO BAMAZON, CUSTOMER #232
@@ -24,7 +24,7 @@ WELCOME TO BAMAZON, CUSTOMER #232
 
 ## Customer
 
-Shows the user the store inventory and gives the user the option to select item to purchase. 
+Shows the user the store inventory and gives the user the option to select an item and an amount to purchase. 
 
 ```js
 // find requested product by its item id in the table
