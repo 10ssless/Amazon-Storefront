@@ -64,20 +64,20 @@ SELECT * FROM products;
 
 
 SELECT
-  dept_id AS ID,
-  dept_name AS Department,
-  MIN(departments.over_head_costs) AS Overhead,
-  SUM(products.product_sales) AS Sales,
-  SUM(products.product_sales - departments.over_head_costs) AS Profit
+	dept_id AS 'Dept ID',
+	dept_name AS 'Department',
+	MIN(departments.over_head_costs) AS 'Overhead Cost',
+	SUM(products.product_sales) AS 'Department Sales',
+	SUM(products.product_sales - departments.over_head_costs) AS 'Total Profit'
 FROM
-  departments
+	departments
 LEFT JOIN
-  products
+	products
 USING
-  (dept_name)
+	(dept_name)
 GROUP BY
-  dept_id,
-  dept_name;
+	dept_id,
+	dept_name;
     
     
     
