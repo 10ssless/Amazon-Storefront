@@ -78,11 +78,11 @@ function buyItem(id,q) {
             let q = data.quantity
             connection.query(
                 `SELECT 
-                    item_id,
-                    product_name,
-                    dept_name,
-                    price,
-                    stock 
+                    item_id AS "Item ID",
+                    product_name AS "Product",
+                    dept_name AS "Department",
+                    price AS "Price ($)",
+                    stock AS "In Stock"
                 FROM 
                     products 
                 WHERE 

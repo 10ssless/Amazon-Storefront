@@ -2,7 +2,25 @@
 
 This is a console-line application that emulates an online marketplace like Amazon. Utilizes ```inquirer``` and ```mysql``` modules in NodeJS.
 
+```
+WELCOME TO BAMAZON, CUSTOMER #232
 
+┌─────────┬─────────┬────────────────────────────┬──────────────────┬───────────┬──────────┐
+│ (index) │ Item ID │          Product           │    Department    │ Price ($) │ In Stock │
+├─────────┼─────────┼────────────────────────────┼──────────────────┼───────────┼──────────┤
+│    0    │   100   │    'Herschel Backpack'     │ 'Back To School' │    50     │    98    │
+│    1    │   101   │     '13in Macbook Pro'     │  'Electronics'   │   1000    │    97    │
+│    2    │   102   │     'Samsung 1TB SSD'      │  'Electronics'   │    80     │    50    │
+│    3    │   103   │     'Nike Flip Flops'      │    'Apparel'     │    25     │   428    │
+│    4    │   104   │  '3-Drawer Writing Desk'   │   'Furniture'    │    150    │    5     │
+│    5    │   105   │   'Whey Protein Powder'    │     'Health'     │    50     │   140    │
+│    6    │   106   │ 'Inflatable Swimming Pool' │     'Summer'     │    30     │    4     │
+│    7    │   107   │    'Wilson Basketball'     │     'Sports'     │    20     │    60    │
+└─────────┴─────────┴────────────────────────────┴──────────────────┴───────────┴──────────┘
+? WHAT WOULD YOU LIKE TO DO? (Use arrow keys)
+❯ MAKE A PURCHASE 
+  EXIT 
+```
 
 ## Customer
 
