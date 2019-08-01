@@ -38,6 +38,7 @@ function start() {
                     break;
 
             }
+            // start()
         })
 }
 
@@ -46,8 +47,8 @@ function showAll() {
     connection.query(
         `SELECT 
             item_id AS "Item ID",
-            product_name AS "Product",
-            dept_name AS  "Department",
+            product_name AS Product,
+            dept_name AS  Department,
             price AS "Price ($)",
             stock AS "In Stock" 
         FROM 
@@ -73,14 +74,14 @@ function buyItem(id,q) {
                 message: "HOW MANY UNITS WOULD YOU LIKE:",
                 type: "number"
             }
-        ]).then(function (data) {
+        ]).then( function(data) {
             let id = data.itemID
             let q = data.quantity
             connection.query(
                 `SELECT 
                     item_id AS "Item ID",
-                    product_name AS "Product",
-                    dept_name AS "Department",
+                    product_name AS Product,
+                    dept_name AS Department,
                     price AS "Price ($)",
                     stock AS "In Stock"
                 FROM 
@@ -88,28 +89,24 @@ function buyItem(id,q) {
                 WHERE 
                     item_id = ${id}`, 
                 function (err, res) {
-                if (err) throw err.stack;
-                
-                if(res[0].stock >= q){
-                    let total = q*res[0].price
-                    let left = res[0].stock - q
-                    console.log(`\nYou have purchased ${q} ${res[0].product_name}(s).\nYou're total is $${total}`)
-        
-                    updateDB(id,left,total)
-                }
-                else if(res[0].stock == 0) {
-                    console.log(`\nSorry, that item is out of stock. Try selecting a different item.\n`)
-                    start()
-                }
-                else if (res[0].stock < q) {
-                    console.log(`\nThere's not enough ${res[0].product_name}'s in the store. Try entering a different amount.\n`)
-                    start()
-                }
-                // connection.end()
-            });
-        })
-
-
+                    if (err) throw err.stack;
+                    
+                    if (res[0]["In Stock"] >= q) {
+                        let total = q * res[0]["Price ($)"]
+                        let left = res[0]["In Stock"] - q
+                        console.log(`\nYou have purchased ${q} ${res[0]["Product"]}(s).\nYou're total is $${total}`)
+                        updateDB(id,left,total)
+                    }
+                    else if (res[0]["In Stock"] == 0) {
+                        console.log(`\nSorry, that item is out of stock. Try selecting a different item.\n`)
+                        buyItem()
+                    }
+                    else if (res[0]["In Stock"] < q) {
+                        console.log(`\nThere's not enough ${res[0]["Product"]}'s in the store. Try entering a different amount.\n`)
+                        buyItem()
+                    }
+                });
+            })
 }
 
 

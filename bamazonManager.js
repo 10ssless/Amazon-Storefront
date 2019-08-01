@@ -55,11 +55,11 @@ function showAll() {
     connection.query(
         `SELECT 
             item_id AS "Item ID",
-            product_name AS "Product",
-            dept_name AS  "Department",
-            price AS "Price",
+            product_name AS Product,
+            dept_name AS  Department,
+            price AS "Price ($)",
             stock AS "In Stock" ,
-            product_sales AS "Product Sales"
+            product_sales AS "Product Sales ($)"
         FROM 
             products`,
         function (err, res) {
@@ -75,11 +75,11 @@ function lowStock() {
     connection.query(
         `SELECT 
             item_id AS "Item ID",
-            product_name AS "Product",
-            dept_name AS "Department",
+            product_name AS Product,
+            dept_name AS Department,
             price AS "Price ($)",
             stock AS "In Stock",
-            product_sales AS "Product Sales"
+            product_sales AS "Product Sales ($)"
         FROM
             products 
         WHERE 
