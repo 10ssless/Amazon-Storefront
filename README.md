@@ -24,7 +24,7 @@ WELCOME TO BAMAZON, CUSTOMER #232
 
 ## Customer
 
-Shows the user the store table and gives the user the option to select item to purchase. 
+Shows the user the store inventory and gives the user the option to select item to purchase. 
 
 ```js
 // find requested product by its item id in the table
