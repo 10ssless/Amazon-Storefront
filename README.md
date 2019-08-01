@@ -22,6 +22,8 @@ WELCOME TO BAMAZON, CUSTOMER #232
   EXIT 
 ```
 
+
+
 ## Customer
 
 Shows the user the store's current inventory and allows the user to enter an item id and an amount to purchase. 
@@ -39,6 +41,8 @@ FROM
 WHERE
     item_id = ${id}
 ```
+ 
+
 
 
 ## Manager
