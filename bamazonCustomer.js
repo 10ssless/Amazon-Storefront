@@ -76,7 +76,18 @@ function buyItem(id,q) {
         ]).then(function (data) {
             let id = data.itemID
             let q = data.quantity
-            connection.query(`SELECT item_id,product_name,dept_name,price,stock FROM products WHERE item_id = ${id}`, function (err, res) {
+            connection.query(
+                `SELECT 
+                    item_id,
+                    product_name,
+                    dept_name,
+                    price,
+                    stock 
+                FROM 
+                    products 
+                WHERE 
+                    item_id = ${id}`, 
+                function (err, res) {
                 if (err) throw err.stack;
                 
                 if(res[0].stock >= q){

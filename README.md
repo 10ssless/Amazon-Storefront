@@ -8,7 +8,19 @@ This is a console-line application that emulates an online marketplace like Amaz
 
 Shows the user the store table and gives the user the option to select item to purchase. 
 
-
+```js
+// find requested product by its item id in the table
+SELECT 
+    item_id AS "Item ID",
+    product_name AS "Product",
+    dept_name AS  "Department",
+    price AS "Price ($)",
+    stock AS "In Stock"
+FROM
+    products
+WHERE
+    item_id = ${id}
+```
 
 
 ## Manager
@@ -28,12 +40,12 @@ WHERE
 
 
 
-
 ## Supervisor
 
 Gives the supervisor the option to ```View Product Sales By Dept```. This task calls a MySQL query that utilizes a ```LEFT JOIN``` to combine and display information from multiple tables. 
 
 ```js
+// return aggregated records from total sales of each dept
 SELECT
     dept_id AS "Dept ID",
     dept_name AS Department,
