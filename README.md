@@ -47,7 +47,7 @@ Gives the manager options to ```View Products For Sale```,```View Low Inventory`
 
 
 ```js
-// update record at requested id and add requested amount to in stock amount
+// update record at requested id and add specified amount to stock quatity
 UPDATE 
     products 
 SET 
@@ -63,7 +63,7 @@ WHERE
 Gives the supervisor the option to ```View Product Sales By Dept```. This task calls a MySQL query that utilizes a ```LEFT JOIN``` to combine and display information from multiple tables. 
 
 ```js
-// return aggregated records from total sales of each dept
+// return aggregated records from total sales for each dept
 SELECT
     dept_id AS "Dept ID",
     dept_name AS Department,
