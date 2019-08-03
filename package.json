@@ -1,0 +1,26 @@
+{
+  "name": "Amazon-Storefront",
+  "version": "1.0.0",
+  "description": "This is a console-line application that emulates an online marketplace like Amazon. Contains 3 different js files for a **Customer**, **Manager**, and **Supervisor** console, each with distinct database access and a set of tasks to perform. Utilizes the ```inquirer```, ```mysql```, and ```dotenv``` modules in NodeJS.",
+  "main": "bamazonCustomer.js",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "inquirer": "^6.5.0",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10ssless/Amazon-Storefront.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/10ssless/Amazon-Storefront/issues"
+  },
+  "homepage": "https://github.com/10ssless/Amazon-Storefront#readme"
+}
